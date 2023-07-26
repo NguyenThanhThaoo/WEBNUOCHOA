@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "ChiTietNuocHoa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .nh, .motasach{
+        align-items :center;
+    }
+</style>
+<div class="container nh">
+    <h4 class="tennuochoa" align="center">
+        @Model.TenNH
+    </h4>
+    <div style="display: flex; justify-content : center">
+        <img src="~/Content/img/@Model.HinhMinhHoa" width="200px" />
+    </div>
+    <div class="motasach">
+        <p>
+            @Html.Raw(Model.MoTa.ToString().Replace("\n", "</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp"))
+        </p>
+    </div>
+    <p class="ngaycapnhat">Ngày cập nhật: @Html.FormatValue(@Model.NgayCapNhat, "{0:dd/MM/yyyy}") </p>
+    <p class="giaban">Giá bán: <span>@Html.FormatValue(@Model.DonGia, "{0:#,##0}") VNĐ</span></p>
+    <p class="addtocard" style="text-align:center">
+        <a href="@Url.Action("ThemGioHang", "GioHang", new {ms = @Model.MaNH,url = Request.Url.ToString()})"
+           class="btn btn-success" role="button">
+            <span class="glyphicon glyphicon-shopping-cart"
+                  aria-hidden="true"></span> Thêm vào giỏ hàng
+
+        </a>
+    </p>
+
+
+
+
+</div>

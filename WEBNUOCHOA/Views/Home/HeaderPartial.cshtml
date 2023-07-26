@@ -1,0 +1,67 @@
+﻿<style>
+    .header-area .main-nav .nav li a {
+        text-transform: uppercase;
+        font-size : 13px;
+        font-weight : 500;
+    }
+</style>
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="@Url.Action("Index","Home")" class="logo">
+                        <img src="~/Content/img/Logo đại perfume (1).png" width="90px" />
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li class="scroll-to-section"><a href="#top" class="active">Trang Chủ</a></li>
+
+                        <li class="submenu">
+                            <a href="javascript:;">Danh Mục</a>
+                            <ul style="width:250px;">
+                                <li class="scroll-to-section"><a href="#men">Nước Hoa Nam Mới Nhất</a></li>
+                                <li class="scroll-to-section"><a href="#women">Nước Hoa Nữ Mới Nhất</a></li>
+                                <li class="scroll-to-section"><a href="#kids">Nước Hoa Unisex Mới Nhất</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:;">Pages</a>
+                            <ul>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="@Url.Action("Products","Home")">Products</a></li>
+                                <li><a href="single-product.html">Single Product</a></li>
+                                <li><a href="contact.html">Liên Hệ</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:;">Blog</a>
+                            <ul>
+                                <li><a href="#">Bật mí cách bảo quản nước hoa không phải ai cũng biết</a></li>
+                                <li><a href="#">Nên chọn nước hoa nồng độ EDT hay EDP ?</a></li>
+                                <li><a href="#">Top 7 nước hoa mùa đông 2021 cho nam giới</a></li>
+                                <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="gio-hang">
+                            @Html.Action("GioHangPartial", "GioHang")
+                        </li>
+                        <li class="submenu">
+                            <a href="javascript:;">Người Dùng</a>
+                            <ul>
+                                <li><a href="@Url.Action("DangNhap","User")">Đăng Nhập</a></li>
+                                <li><a href="@Url.Action("DangKy","User")">Đăng Ký</a></li>
+                            </ul>
+                        </li>
+                       
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+</nav>
+            </div>
+        </div>
+    </div>
+</header>

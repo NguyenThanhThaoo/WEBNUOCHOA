@@ -1,0 +1,30 @@
+﻿@foreach (var n in Model)
+{
+    <div class="col-lg-4">
+
+        <div class="item">
+            <div class="thumb">
+                <div class="hover-content">
+                    <ul>
+                        <li><a href="/Home/ChiTietNuocHoa/@n.MaNH"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                        <li><a href="@Url.Action("ThemGioHang", "GioHang", new {ms = @n.MaNH,url = Request.Url.ToString()})"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <img src="~/Content/img/@n.HinhMinhHoa" alt="" style="width : 200px">
+            </div>
+            <div class="down-content">
+                <h5>@n.TenNH</h5>
+                <span>@n.DonGia</span>
+                @*<ul class="stars">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                    </ul>*@
+            </div>
+        </div>
+
+    </div>
+}
